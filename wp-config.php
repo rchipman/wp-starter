@@ -31,10 +31,10 @@ if (WP_ENV == 'local') {
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . WP_CLIENT . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
-    define('DB_NAME',           '******');
-    define('DB_USER',           '******');
-    define('DB_PASSWORD',       '******');
-    define('DB_HOST',           '******');
+    define('DB_NAME',           'wp_' . WP_CLIENT . '_dev');
+    define('DB_USER',           'root');
+    define('DB_PASSWORD',       'root');
+    define('DB_HOST',           'localhost:8889');
 } else if (WP_ENV == 'development') {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
