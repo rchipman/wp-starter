@@ -14,11 +14,13 @@
  * @package WordPress
  */
 define('WP_CLIENT', '******');
+define('WP_DEVSITE', '******');
+define('WP_PRODSITE', '******');
 
 
 if ($_SERVER['REMOTE_ADDR']=='::1') {
     define('WP_ENV', 'local');
-} else if (preg_match('/*******/', $_SERVER['REMOTE_ADDR'])) {
+} else if (preg_match(WP_DEVSITE, $_SERVER['REMOTE_ADDR'])) {
     define('WP_ENV', 'development'); 
 } else {
     define('WP_ENV', 'production');
@@ -31,7 +33,7 @@ if (WP_ENV == 'local') {
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . WP_CLIENT . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
-    define('DB_NAME',           'wp_' . WP_CLIENT . '_dev');
+    define('DB_NAME',           'wp_' . WP_CLIENT . '_local');
     define('DB_USER',           'root');
     define('DB_PASSWORD',       'root');
     define('DB_HOST',           'localhost:8889');
@@ -40,19 +42,19 @@ if (WP_ENV == 'local') {
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
-    define('DB_NAME',           'wp_' . WP_CLIENT . '_prod');
+    define('DB_NAME',           'wp_' . WP_CLIENT . '_dev');
     define('DB_USER',           '******');
     define('DB_PASSWORD',       '******');
-    define('DB_HOST',           'mysql.******.co');
+    define('DB_HOST',           'mysql.' . WP_DEVSITE . '.co');
 } else {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
-    define('DB_NAME',           '******');
+    define('DB_NAME',           'wp_' . WP_CLIENT . '_prod');
     define('DB_USER',           '******');
     define('DB_PASSWORD',       '******');
-    define('DB_HOST',           'mysql.******.co');
+    define('DB_HOST',           'mysql.' . WP_PRODSITE . '.co');
 }
 
 /** Database Charset to use in creating database tables. */
