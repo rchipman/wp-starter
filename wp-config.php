@@ -17,7 +17,9 @@ define('WP_CLIENT', '******');
 
 
 if ($_SERVER['REMOTE_ADDR']=='::1') {
-    define('WP_ENV', 'development');
+    define('WP_ENV', 'local');
+} else if (preg_ match('/*******/', $_SERVER['REMOTE_ADDR'])) {
+    define('WP_ENV', 'development'); 
 } else {
     define('WP_ENV', 'production');
 }
