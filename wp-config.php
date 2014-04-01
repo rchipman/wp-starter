@@ -41,18 +41,18 @@ if (WP_ENV == 'local') {
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
     define('DB_NAME',           'wp_' . WP_CLIENT . '_dev');
-    define('DB_USER',           '******');
-    define('DB_PASSWORD',       '******');
-    define('DB_HOST',           'mysql.' . WP_DEVSITE . '.co');
+    define('DB_USER',           DEV_DB_USER);
+    define('DB_PASSWORD',       DEV_DB_PASS);
+    define('DB_HOST',           'mysql.' . PROD_URL . '.co');
 } else {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
     define('DB_NAME',           'wp_' . WP_CLIENT . '_prod');
-    define('DB_USER',           '******');
-    define('DB_PASSWORD',       '******');
-    define('DB_HOST',           'mysql.' . WP_PRODSITE . '.co');
+    define('DB_USER',           PROD_DB_USER);
+    define('DB_PASSWORD',       PROD_DB_USER);
+    define('DB_HOST',           'mysql.' . PROD_URL . '.co');
 }
 
 /** Database Charset to use in creating database tables. */
