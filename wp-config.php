@@ -13,7 +13,7 @@
  *
  * @package WordPress
  */
-define('WP_CLIENT',         '/trivaco');
+define('WP_CLIENT', '/trivaco');
 
 
 if ($_SERVER['REMOTE_ADDR']=='::1') {
@@ -28,7 +28,7 @@ if (WP_ENV == 'development') {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . WP_CLIENT . '/wp-content');
-define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
+    define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
     define('DB_NAME',           'wp_trivaco_dev');
     define('DB_USER',           'root');
     define('DB_PASSWORD',       'root');
@@ -37,11 +37,11 @@ define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/w
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
-define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
-    define('DB_NAME',           'wp_trivaco_dev');
-    define('DB_USER',           'username');
-    define('DB_PASSWORD',       'password');
-    define('DB_HOST',           'mysql.mysite.com');
+    define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
+    define('DB_NAME',           'trivaco_robchipman_co');
+    define('DB_USER',           'trivacorobchipma');
+    define('DB_PASSWORD',       'XkDukkxx');
+    define('DB_HOST',           'mysql.trivaco.robchipman.co');
 } 
 
 /** Database Charset to use in creating database tables. */
