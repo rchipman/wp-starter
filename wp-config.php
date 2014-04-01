@@ -29,10 +29,10 @@ if ($_SERVER['REMOTE_ADDR']=='::1') {
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 if (WP_ENV == 'local') {
-    define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT . '/wordpress');
-    define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT);
-    define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . WP_CLIENT . '/wp-content');
-    define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
+    define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/' . WP_CLIENT . '/wordpress');
+    define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . '/' . WP_CLIENT);
+    define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/' . WP_CLIENT . '/wp-content');
+    define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/' . WP_CLIENT .'/wp-content');
     define('DB_NAME',           'wp_' . WP_CLIENT . '_local');
     define('DB_USER',           'root');
     define('DB_PASSWORD',       'root');
