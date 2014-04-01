@@ -13,7 +13,7 @@
  *
  * @package WordPress
  */
-define('WP_CLIENT', '/trivaco');
+define('WP_CLIENT', '******');
 
 
 if ($_SERVER['REMOTE_ADDR']=='::1') {
@@ -29,19 +29,19 @@ if (WP_ENV == 'development') {
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . WP_CLIENT . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . WP_CLIENT .'/wp-content');
-    define('DB_NAME',           'wp_trivaco_dev');
-    define('DB_USER',           'root');
-    define('DB_PASSWORD',       'root');
-    define('DB_HOST',           'localhost:8889');
+    define('DB_NAME',           '******');
+    define('DB_USER',           '******');
+    define('DB_PASSWORD',       '******');
+    define('DB_HOST',           '******');
 } else {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
     define('WP_CONTENT_DIR',    $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
     define('WP_CONTENT_URL',    'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
-    define('DB_NAME',           'trivaco_robchipman_co');
-    define('DB_USER',           'trivacorobchipma');
-    define('DB_PASSWORD',       'XkDukkxx');
-    define('DB_HOST',           'mysql.trivaco.robchipman.co');
+    define('DB_NAME',           '******');
+    define('DB_USER',           '******');
+    define('DB_PASSWORD',       '******');
+    define('DB_HOST',           'mysql.******.co');
 } 
 
 /** Database Charset to use in creating database tables. */
@@ -59,14 +59,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '+[6g-$J!]A<Cl)|-H d9.)2=hop?|RZIHOnrX=tkfYU:y~L:Y]?-;h1Xd`QGtf!P');
-define('SECURE_AUTH_KEY',  '+AYf$Tt]q9a-#Kd+}pKsE0x&KH!g7m P(~P^kp]chcLRJBBOCN->@):Hla0orA|J');
-define('LOGGED_IN_KEY',    'f(Egy|f{%E*F;7>((,kOcE%G;|<P+|V*2/kO6Cf[p[4>e~-Wg+Za5+pG~T|5*a{o');
-define('NONCE_KEY',        'Q|;vpkq4FFoe)niWN-/Ks;o|vLxFd1hV&D}%DslLd73h+e:D~=I! ! Lklt;tM%~');
-define('AUTH_SALT',        'T;[?3)8-J;`&:*5*0*Gu1l^%dEm&%D9#@)TcLC:ER{Ru=L-1?yl_bzVD<:50[jGV');
-define('SECURE_AUTH_SALT', '{TR@+$sRr0)%)0gJkx@Zol6Y&=]dqi:+di%)r6u~#N38|,HJTMZEz&V+EubF-qHD');
-define('LOGGED_IN_SALT',   'd5[uxAp%D#e921d8_JIKiKOWkl[f]$r~1@Gm{T,Y/,-N;gJ}O]h%:Hees-y2=c>(');
-define('NONCE_SALT',       'a^J-RO:*e?P%Jq0d`O@@zszU>-|A99=e$Sc@=~OtnHnqpsMtGAj/gR]BTfsy|**5');
+define('AUTH_KEY',         'NEW SALTS');
+define('SECURE_AUTH_KEY',  'NEW SALTS');
+define('LOGGED_IN_KEY',    'NEW SALTS');
+define('NONCE_KEY',        'NEW SALTS');
+define('AUTH_SALT',        'NEW SALTS');
+define('SECURE_AUTH_SALT', 'NEW SALTS');
+define('LOGGED_IN_SALT',   'NEW SALTS');
+define('NONCE_SALT',       'NEW SALTS');
 
 /**#@-*/
 
