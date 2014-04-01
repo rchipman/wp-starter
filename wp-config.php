@@ -13,9 +13,7 @@
  *
  * @package WordPress
  */
-define('WP_CLIENT', '******');
-define('WP_DEVSITE', '******');
-define('WP_PRODSITE', '******');
+require_once(ABSPATH . '/../wp-client-variables.php');
 
 
 if ($_SERVER['REMOTE_ADDR']=='::1') {
