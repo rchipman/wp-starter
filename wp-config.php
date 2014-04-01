@@ -43,7 +43,7 @@ if (WP_ENV == 'local') {
     define('DB_NAME',           'wp_' . WP_CLIENT . '_dev');
     define('DB_USER',           DEV_DB_USER);
     define('DB_PASSWORD',       DEV_DB_PASS);
-    define('DB_HOST',           'mysql.' . DEV_URL . '.co');
+    define('DB_HOST',           'mysql.' . DEV_URL);
 } else {
     define('WP_SITEURL',        'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
     define('WP_HOME',           'http://' . $_SERVER['SERVER_NAME']);
@@ -52,7 +52,7 @@ if (WP_ENV == 'local') {
     define('DB_NAME',           'wp_' . WP_CLIENT . '_prod');
     define('DB_USER',           PROD_DB_USER);
     define('DB_PASSWORD',       PROD_DB_USER);
-    define('DB_HOST',           'mysql.' . PROD_URL . '.co');
+    define('DB_HOST',           'mysql.' . PROD_URL);
 }
 
 /** Database Charset to use in creating database tables. */
