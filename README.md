@@ -1,1 +1,1 @@
-Be sure to update the 'wordpress' submodule vie command line after forking this repo.
+Be sure to update the 'wordpress' submodule via command line after forking this repo.
